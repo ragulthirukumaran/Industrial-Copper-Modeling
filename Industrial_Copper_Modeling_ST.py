@@ -78,15 +78,14 @@ with tab1:
     if submit_button and flag == 0:
         import pickle
 
-        with open(r"C:\\Users\\morle\\copper_model\\model.pkl", 'rb') as file:
+        with open(r"C:\Users\elcot\Downloads\model.pkl", 'rb') as file:
             loaded_model = pickle.load(file)
-        with open(r'C:\\Users\\morle\\copper_model\\scaler.pkl', 'rb') as f:
+        with open(r'C:\Users\elcot\Downloads\scaler.pkl', 'rb') as f:
             scaler_loaded = pickle.load(f)
-        with open(r"C:\\Users\\morle\\copper_model\\t.pkl", 'rb') as f:
+        with open(r"C:\Users\elcot\Downloads\t.pkl", 'rb') as f:
             t_loaded = pickle.load(f)
-        with open(r"C:\\Users\\morle\\copper_model\\s.pkl", 'rb') as f:
+        with open(r"C:\Users\elcot\Downloads\s.pkl", 'rb') as f:
             s_loaded = pickle.load(f)
-
         new_sample = np.array([[np.log(float(quantity_tons)), application, np.log(float(thickness)), float(width),
                                 country, float(customer), int(product_ref), item_type, status]])
 
@@ -134,11 +133,11 @@ with tab2:
     if csubmit_button and cflag == 0:
         import pickle
 
-        with open(r"C:\\Users\\morle\\copper_model\\cmodel.pkl", 'rb') as file:
+        with open(r"C:\Users\elcot\Downloads\cmodel.pkl", 'rb') as file:
             cloaded_model = pickle.load(file)
-        with open(r'C:\\Users\\morle\\copper_model\\cscaler.pkl', 'rb') as f:
+        with open(r'C:\Users\elcot\Downloads\cscaler.pkl', 'rb') as f:
             cscaler_loaded = pickle.load(f)
-        with open(r"C:\\Users\\morle\\copper_model\\ct.pkl", 'rb') as f:
+        with open(r"C:\Users\elcot\Downloads\ct.pkl", 'rb') as f:
             ct_loaded = pickle.load(f)
         # Predict the status for a new sample
         # 'quantity tons_log', 'selling_price_log','application', 'thickness_log', 'width','country','customer','product_ref']].values, X_ohe
